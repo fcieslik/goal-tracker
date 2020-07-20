@@ -1,0 +1,36 @@
+@import "variables";
+@import "theme";
+@import "fonts";
+
+.navigation-bar-container {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  @include getSpace(padding, medium);
+  border-bottom: 1px solid lightgrey;
+  background-color: $primary;
+  align-items: center;
+}
+
+
+.navigation-element {
+  @include large-bold;
+  color: $primary-text;
+  cursor: pointer;
+
+  &:hover {
+    color: $element-hover;
+
+    span {
+      border: 0;
+    }
+  }
+}
+
+.logo-element {
+  height: 70px;
+}
+
+.active-route {
+  border-bottom: 2px solid $active-link;
+  padding-bottom: 3px;
+}

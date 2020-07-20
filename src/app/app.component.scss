@@ -1,0 +1,31 @@
+@import "size";
+@import "variables";
+@import "theme";
+
+.app {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-rows: $navigation-height 1fr;
+  grid-template-areas:
+    "navigation"
+    "content";
+
+  &__nav {
+    grid-area: navigation;
+  }
+
+  &__content {
+    grid-area: content;
+    @include getSpace(padding, xlarge);
+  }
+}
+
+.date-app {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 50px;
+  padding: 0 16px;
+  border-top: 1px solid lightgrey;
+}

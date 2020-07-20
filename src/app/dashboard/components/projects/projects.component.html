@@ -1,0 +1,16 @@
+<div class="projects">
+  <div class="projects__header">
+    <span>Current projects</span>
+  </div>
+  <div class="projects__message">
+    <div class="projects__project" *ngFor="let project of currentProjects | async">
+      <div>
+        <p class="projects__small">Project name</p>
+        <p>{{project.projectName}}</p>
+      </div>
+      <div>
+        Link
+      </div>
+    </div>
+  </div>
+</div>

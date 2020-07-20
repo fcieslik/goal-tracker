@@ -1,0 +1,33 @@
+@mixin xsmall {
+  font-size: 10px;
+}
+
+@mixin small {
+  font-size: 14px;
+}
+
+@mixin regular {
+  font-size: 18px;
+}
+
+@mixin large {
+  font-size: 20px;
+}
+
+@mixin xlarge {
+  font-size: 24px;
+}
+
+@mixin xxlarge {
+  font-size: 32px;
+}
+
+@mixin regular-bold {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@mixin large-bold {
+  font-size: 20px;
+  font-weight: bold;
+}

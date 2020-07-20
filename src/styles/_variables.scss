@@ -1,0 +1,13 @@
+$paddings-map: (xs: 8px, small: 12px, medium: 16px, large: 20px, xlarge: 24px, xxlarge: 28px);
+
+@mixin getSpace($property-name, $key: medium) {
+  #{$property-name}: getSpacing($key, $paddings-map);
+}
+
+@function getSpacing($key, $map) {
+  @if (map-has-key($map, $key)) {
+    @return map-get($map, $key)
+  } @else {
+    @error "Make sure that $key has proper string value of small || medium || large";
+  }
+}

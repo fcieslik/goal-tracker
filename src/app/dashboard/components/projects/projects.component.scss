@@ -1,0 +1,35 @@
+@import "theme";
+@import "variables";
+@import "fonts";
+
+.projects {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 30px 1fr;
+
+  &__header {
+    background-color: $accent-3;
+    display: flex;
+    align-items: center;
+    padding: 0 getSpacing(xs, $paddings-map);
+  }
+
+  &__message {
+    padding: getSpacing(xs, $paddings-map);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr;
+  }
+
+  &__small {
+    @include xsmall;
+    color: $secondary-text;
+  }
+
+  &__project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
